@@ -1,0 +1,706 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8448211667930296276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4766871509011993164}
+  - component: {fileID: 2711833029595510622}
+  - component: {fileID: 963784890384726635}
+  - component: {fileID: 1890695854601273322}
+  - component: {fileID: 8408934417545809435}
+  - component: {fileID: 2343857391917557668}
+  - component: {fileID: 7931528880718496195}
+  - component: {fileID: 1912543612124420633}
+  - component: {fileID: 1633528046001715563}
+  m_Layer: 0
+  m_Name: MeleeAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4766871509011993164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448211667930296276}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9174145535239761041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2711833029595510622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448211667930296276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3203f38d4afc6a4283618fa1df06ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "When (DistanceTo(Tag[Player]) <= 16) and (MeleeAttack > 0.5):\n         
+    flashes renderer Enemy Variant for 0.1 seconds\n          resets variable MeleeAttack\n         
+    sets variable DamageValue to 10\n          find all objects tagged with any of
+    [Player] and in them find actions tagged with any of [ActionDamagePlayer] and
+    execute all of them.\n\nThis trigger will execute only when the conditions change
+    and they are all true."
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 963784890384726635}
+  - delay: 0
+    action: {fileID: 1890695854601273322}
+  - delay: 0
+    action: {fileID: 8408934417545809435}
+  - delay: 0
+    action: {fileID: 2343857391917557668}
+  continuous: 0
+  conditions:
+  - negate: 0
+    valueHandler: {fileID: 0}
+    variable: {fileID: 0}
+    valueType: 8
+    tag: {fileID: 11400000, guid: 6354a9ef4de49a1489d2cae5d17f8943, type: 2}
+    tagCountRangeEnabled: 0
+    tagCountRange: 0
+    sourceTransform: {fileID: 0}
+    rigidBody: {fileID: 0}
+    axis: 0
+    probe: {fileID: 0}
+    movementPlatformer: {fileID: 0}
+    comparison: 2
+    value: 16
+    comparisonValueHandler: {fileID: 0}
+    comparisonVariable: {fileID: 0}
+    percentageCompare: 0
+  - negate: 0
+    valueHandler: {fileID: 7931528880718496195}
+    variable: {fileID: 0}
+    valueType: 0
+    tag: {fileID: 11400000, guid: 6354a9ef4de49a1489d2cae5d17f8943, type: 2}
+    tagCountRangeEnabled: 0
+    tagCountRange: 0
+    sourceTransform: {fileID: 0}
+    rigidBody: {fileID: 0}
+    axis: 0
+    probe: {fileID: 0}
+    movementPlatformer: {fileID: 0}
+    comparison: 3
+    value: 0.5
+    comparisonValueHandler: {fileID: 0}
+    comparisonVariable: {fileID: 0}
+    percentageCompare: 0
+  elseActions: []
+--- !u!114 &963784890384726635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448211667930296276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4d31c25fb0a0a488c6aec0ef066b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Flashes renderer Enemy Variant for 0.1 seconds
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  target: {fileID: 7900666979037312093}
+  color:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0.89902055, b: 0, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 30395
+    atime2: 65535
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 3
+  duration: 0.1
+--- !u!114 &1890695854601273322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448211667930296276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb749f9fa0d36840b27121330707a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Resets variable MeleeAttack
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  valueHandler: {fileID: 7931528880718496195}
+  variable: {fileID: 0}
+  operation: 0
+  changeValue: 0
+  changeValueHandler: {fileID: 0}
+  changeVariable: {fileID: 0}
+  scaleWithTime: 0
+--- !u!114 &8408934417545809435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448211667930296276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb749f9fa0d36840b27121330707a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Sets variable DamageValue to 10
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  valueHandler: {fileID: 0}
+  variable: {fileID: 11400000, guid: cd7f4c07e8614d5448a1edbefd8363ca, type: 2}
+  operation: 1
+  changeValue: 10
+  changeValueHandler: {fileID: 0}
+  changeVariable: {fileID: 0}
+  scaleWithTime: 0
+--- !u!114 &2343857391917557668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448211667930296276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5e16b163b1cd84eb48645e1b7ff1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Find all objects tagged with any of [Player] and in them find actions
+    tagged with any of [ActionDamagePlayer] and execute all of them.
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  searchType: 1
+  searchTags:
+  - {fileID: 11400000, guid: 6354a9ef4de49a1489d2cae5d17f8943, type: 2}
+  colliders: []
+  triggerType: 0
+  triggerTags:
+  - {fileID: 11400000, guid: ccf70ea87c94101499b904f94639cb68, type: 2}
+--- !u!114 &7931528880718496195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448211667930296276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56c124f990a067b478caf900b6cb6d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  type: 0
+  currentValue: 0
+  defaultValue: 0
+  hasLimits: 0
+  minValue: -3.4028235e+38
+  maxValue: 3.4028235e+38
+--- !u!114 &1912543612124420633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448211667930296276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c477183935167543b8555b000ac6ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "Every frame:\n          adds 1 to variable MeleeAttack, every second.\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 1633528046001715563}
+--- !u!114 &1633528046001715563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448211667930296276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb749f9fa0d36840b27121330707a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Adds 1 to variable MeleeAttack, every second.
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  valueHandler: {fileID: 7931528880718496195}
+  variable: {fileID: 0}
+  operation: 2
+  changeValue: 1
+  changeValueHandler: {fileID: 0}
+  changeVariable: {fileID: 0}
+  scaleWithTime: 1
+--- !u!1001 &21042201547020196
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3277702578453249358, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_Name
+      value: Enemy Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391083035112156892, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: _explanation
+      value: "Every frame:\n          sets animation parameter AbsVelocityX of object
+        Enemy Variant to the absolute horizontal velocity of this object\n         
+        if (Enemy Variant.velocity.x > 0) sets Enemy Variant's horizontal flip to
+        False\n          if (Enemy Variant.velocity.x < 0) sets Enemy Variant's horizontal
+        flip to True\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445308363732703365, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: _explanation
+      value: "When a collision with a trigger with tags [PlayerShot] starts:\n         
+        flashes this renderer for 0.1 seconds\n          subtracts value of variable
+        ShotDamage from variable Life\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445308363732703365, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: tags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445308363732703365, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: tags.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3710ecb5e627131499ff67fd80867904, type: 2}
+    - target: {fileID: 4088033101556556307, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: _explanation
+      value: "When (Life <= 0):\n          adds 5 to variable XP\n          add an
+        event on the analytics called [EnemyDie]\n          select randomly between
+        the following actions:\n              1. do nothing (95%)\n             
+        2. spawns prefab Heart at the position of this object (Life) (4%)\n         
+        spawns prefab ZombieExplosion at the position of this object (Life)\n         
+        destroys the parent of this object\n\nThis trigger will execute only when
+        the conditions change and they are all true."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4088033101556556307, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: actions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4088033101556556307, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: actions.Array.data[1].delay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4088033101556556307, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: actions.Array.data[0].action
+      value: 
+      objectReference: {fileID: 6501943828238310023}
+    - target: {fileID: 4088033101556556307, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: actions.Array.data[1].action
+      value: 
+      objectReference: {fileID: 7718739515321858771}
+    - target: {fileID: 4088033101556556307, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: actions.Array.data[2].action
+      value: 
+      objectReference: {fileID: 6017176556570344214}
+    - target: {fileID: 4088033101556556307, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: actions.Array.data[3].action
+      value: 
+      objectReference: {fileID: 5491517914093651820}
+    - target: {fileID: 4088033101556556307, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: actions.Array.data[4].action
+      value: 
+      objectReference: {fileID: 3598543632600593625}
+    - target: {fileID: 4088033101556556307, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: actions.Array.data[5].action
+      value: 
+      objectReference: {fileID: 3598543632600593625}
+    - target: {fileID: 5850509454251967362, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: _explanation
+      value: If (Enemy Variant.velocity.x < 0) sets Enemy Variant's horizontal flip
+        to True
+      objectReference: {fileID: 0}
+    - target: {fileID: 6154177318608992352, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: _explanation
+      value: If (Enemy Variant.velocity.x > 0) sets Enemy Variant's horizontal flip
+        to False
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539561630974824433, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 967aae7c8981b6e4ea7c1c9c732e56a4, type: 2}
+    - target: {fileID: 7800874000220355431, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: hypertags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800874000220355431, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: hypertags.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1623c8c2d5ad5264dabf65fc62725f09, type: 2}
+    - target: {fileID: 7921285318717596665, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1003967640, guid: a54f1ec01b4e14247a1a7b1f2ddd55e0, type: 3}
+    - target: {fileID: 8280189045477290796, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: hypertags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280189045477290796, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: hypertags.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: bc712d7dccca7fa4288f25e627c9b975, type: 2}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163829285133292864, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      propertyPath: _explanation
+      value: Sets animation parameter AbsVelocityX of object Enemy Variant to the
+        absolute horizontal velocity of this object
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4766871509011993164}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3277702578453249358, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 2279347602714275178}
+    - targetCorrespondingSourceObject: {fileID: 6841393721587889284, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6501943828238310023}
+    - targetCorrespondingSourceObject: {fileID: 6841393721587889284, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5491517914093651820}
+    - targetCorrespondingSourceObject: {fileID: 6841393721587889284, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7718739515321858771}
+    - targetCorrespondingSourceObject: {fileID: 6841393721587889284, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6017176556570344214}
+    - targetCorrespondingSourceObject: {fileID: 6841393721587889284, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6919560513958364286}
+    - targetCorrespondingSourceObject: {fileID: 6841393721587889284, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1337367719814712704}
+  m_SourcePrefab: {fileID: 100100000, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+--- !u!1 &3257928700629805802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3277702578453249358, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+  m_PrefabInstance: {fileID: 21042201547020196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2279347602714275178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3257928700629805802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a821a52a563d1854e98869fa6bd62ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 'Follows the closest object tagged with [Player], at 25 units per
+    second, up to a distance of 15 units.
+
+'
+  description: 
+  hasConditions: 0
+  conditions: []
+  speed: 25
+  targetType: 0
+  targetTag: {fileID: 11400000, guid: 6354a9ef4de49a1489d2cae5d17f8943, type: 2}
+  targetObject: {fileID: 0}
+  stoppingDistance: 15
+  relativeMovement: 0
+  rotateTowardsDirection: 0
+  alignAxis: 0
+  maxRotationSpeed: 360
+  cameraObject: {fileID: 0}
+  cameraTag: {fileID: 0}
+--- !u!114 &3598543632600593625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3583274977482662781, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+  m_PrefabInstance: {fileID: 21042201547020196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826122859259487008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e75877c0562c0e49a1475541c319262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6826122859259487008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6841393721587889284, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+  m_PrefabInstance: {fileID: 21042201547020196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6501943828238310023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826122859259487008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb749f9fa0d36840b27121330707a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Adds 5 to variable XP
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  valueHandler: {fileID: 0}
+  variable: {fileID: 11400000, guid: ffbf39120a3e6a0418ffb159c5991daa, type: 2}
+  operation: 2
+  changeValue: 5
+  changeValueHandler: {fileID: 0}
+  changeVariable: {fileID: 0}
+  scaleWithTime: 0
+--- !u!114 &5491517914093651820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826122859259487008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Spawns prefab ZombieExplosion at the position of this object (Life)
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  prefabObject: {fileID: 8133824323138694115, guid: b69215c3b2d4a2e41a31dbee07d28b43, type: 3}
+  spawnPosition: 1
+  targetPosition: {fileID: 0}
+  targetTag: {fileID: 0}
+  setParent: 0
+--- !u!114 &7718739515321858771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826122859259487008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bbb7a5f1794a242ab538523211e62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  eventName: EnemyDie
+  extraData: BaseEnemy
+--- !u!114 &6017176556570344214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826122859259487008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 597b94e489d16984395e6685f78929f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "Select randomly between the following actions:\n  1. do nothing
+    (95%)\n  2. spawns prefab Heart at the position of this object (Life) (4%)"
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  actions:
+  - action: {fileID: 6919560513958364286}
+    probability: 100
+  - action: {fileID: 1337367719814712704}
+    probability: 5
+--- !u!114 &6919560513958364286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826122859259487008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a64cee6de5d273449bca09d72085f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+--- !u!114 &1337367719814712704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826122859259487008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Spawns prefab Heart at the position of this object (Life)
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  prefabObject: {fileID: 9033512154422699384, guid: 798cd6d7c520083409125c83e3d443b4, type: 3}
+  spawnPosition: 1
+  targetPosition: {fileID: 0}
+  targetTag: {fileID: 0}
+  setParent: 0
+--- !u!212 &7900666979037312093 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7921285318717596665, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+  m_PrefabInstance: {fileID: 21042201547020196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9174145535239761041 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9159157279209241397, guid: 309012a5345778f4cb197f7f4350a344, type: 3}
+  m_PrefabInstance: {fileID: 21042201547020196}
+  m_PrefabAsset: {fileID: 0}

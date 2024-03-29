@@ -1,0 +1,463 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1331604723976484457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073360268692488347}
+  - component: {fileID: 2744472274110825131}
+  - component: {fileID: 4526981469133740336}
+  - component: {fileID: 5794781298302316511}
+  - component: {fileID: 2493578725193011801}
+  - component: {fileID: 2300237989053406838}
+  m_Layer: 0
+  m_Name: MeleeExplosion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2073360268692488347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331604723976484457}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 108166833520442053}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2744472274110825131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331604723976484457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3203f38d4afc6a4283618fa1df06ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "When (DistanceTo(Tag[Player]) <= 16):\n          spawns prefab Explosion
+    at the position of this object (MeleeExplosion)\n          sets variable DamageValue
+    to 25\n          find all objects tagged with any of [Player] and in them find
+    actions tagged with any of [ActionDamagePlayer] and execute all of them.\n         
+    destroys the parent of this object\n\nThis trigger will execute only when the
+    conditions change and they are all true."
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 0
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 4526981469133740336}
+  - delay: 0
+    action: {fileID: 5794781298302316511}
+  - delay: 0
+    action: {fileID: 2493578725193011801}
+  - delay: 0
+    action: {fileID: 2300237989053406838}
+  continuous: 0
+  conditions:
+  - negate: 0
+    valueHandler: {fileID: 0}
+    variable: {fileID: 0}
+    valueType: 8
+    tag: {fileID: 11400000, guid: 6354a9ef4de49a1489d2cae5d17f8943, type: 2}
+    tagCountRangeEnabled: 0
+    tagCountRange: 0
+    sourceTransform: {fileID: 0}
+    rigidBody: {fileID: 0}
+    axis: 0
+    probe: {fileID: 0}
+    movementPlatformer: {fileID: 0}
+    comparison: 2
+    value: 16
+    comparisonValueHandler: {fileID: 0}
+    comparisonVariable: {fileID: 0}
+    percentageCompare: 0
+  elseActions: []
+--- !u!114 &4526981469133740336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331604723976484457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Spawns prefab Explosion at the position of this object (MeleeExplosion)
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  prefabObject: {fileID: 2722107592350123461, guid: 632b895c56686084b9876a6690c81fb6, type: 3}
+  spawnPosition: 1
+  targetPosition: {fileID: 0}
+  targetTag: {fileID: 0}
+  setParent: 0
+--- !u!114 &5794781298302316511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331604723976484457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb749f9fa0d36840b27121330707a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Sets variable DamageValue to 25
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  valueHandler: {fileID: 0}
+  variable: {fileID: 11400000, guid: cd7f4c07e8614d5448a1edbefd8363ca, type: 2}
+  operation: 1
+  changeValue: 25
+  changeValueHandler: {fileID: 0}
+  changeVariable: {fileID: 0}
+  scaleWithTime: 0
+--- !u!114 &2493578725193011801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331604723976484457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5e16b163b1cd84eb48645e1b7ff1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Find all objects tagged with any of [Player] and in them find actions
+    tagged with any of [ActionDamagePlayer] and execute all of them.
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  searchType: 1
+  searchTags:
+  - {fileID: 11400000, guid: 6354a9ef4de49a1489d2cae5d17f8943, type: 2}
+  colliders: []
+  triggerType: 0
+  triggerTags:
+  - {fileID: 11400000, guid: ccf70ea87c94101499b904f94639cb68, type: 2}
+--- !u!114 &2300237989053406838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331604723976484457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e75877c0562c0e49a1475541c319262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Destroys the parent of this object
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  target: 1
+  targetObject: {fileID: 0}
+  tags: []
+--- !u!1 &8775739658087345859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6826325353267449778}
+  - component: {fileID: 9135519013573470089}
+  - component: {fileID: 806384566922532598}
+  m_Layer: 0
+  m_Name: LayEgg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6826325353267449778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775739658087345859}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 108166833520442053}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9135519013573470089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775739658087345859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46216fa097ecb754babda0f26d640422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "If (ObjectWithTagInRange(Egg,20) == 0) and Every 1 seconds, trigger
+    the actions::\n          spawns prefab Egg at the position of this object (LayEgg)\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 1
+  preConditions:
+  - negate: 0
+    valueHandler: {fileID: 0}
+    variable: {fileID: 0}
+    valueType: 1
+    tag: {fileID: 11400000, guid: 221c7f9ab75b9694383ce627cbc49603, type: 2}
+    tagCountRangeEnabled: 1
+    tagCountRange: 20
+    sourceTransform: {fileID: 0}
+    rigidBody: {fileID: 0}
+    axis: 0
+    probe: {fileID: 0}
+    movementPlatformer: {fileID: 0}
+    comparison: 0
+    value: 0
+    comparisonValueHandler: {fileID: 0}
+    comparisonVariable: {fileID: 0}
+    percentageCompare: 0
+  actions:
+  - delay: 0
+    action: {fileID: 806384566922532598}
+  startTriggered: 0
+  initialDelayEnable: 0
+  initialDelay: {x: 5, y: 5}
+  timeInterval: {x: 1, y: 1}
+--- !u!114 &806384566922532598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8775739658087345859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Spawns prefab Egg at the position of this object (LayEgg)
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  prefabObject: {fileID: 859964982690686344, guid: 8bf88cdf34617c349842a64ba1b0811e, type: 3}
+  spawnPosition: 1
+  targetPosition: {fileID: 0}
+  targetTag: {fileID: 0}
+  setParent: 0
+--- !u!1001 &9138179576143631956
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 963784890384726635, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: Flashes renderer Rabbit for 0.1 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711833029595510622, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: "When (DistanceTo(Tag[Player]) <= 16) and (MeleeAttack > 0.5):\n         
+        flashes renderer Rabbit for 0.1 seconds\n          resets variable MeleeAttack\n         
+        find all objects tagged with any of [Player] and in them find actions tagged
+        with any of [ActionDamagePlayer] and execute all of them.\n\nThis trigger
+        will execute only when the conditions change and they are all true."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257928700629805802, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_Name
+      value: Rabbit Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406214218510645624, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: "Every frame:\n          sets animation parameter AbsVelocityX of object
+        Rabbit Variant to the absolute horizontal velocity of this object\n         
+        if (Rabbit Variant.velocity.x > 0) sets Rabbit Variant's horizontal flip
+        to False\n          if (Rabbit Variant.velocity.x < 0) sets Rabbit Variant's
+        horizontal flip to True\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103163776152483255, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: "When (Life <= 0):\n          adds 5 to variable XP\n          add an
+        event on the analytics called [EnemyDie]\n          select randomly between
+        the following actions:\n              1. do nothing (95%)\n             
+        2. spawns prefab Heart at the position of this object (Life) (4%)\n         
+        spawns prefab RabbitExplosion Variant at the position of this object (Life)\n         
+        destroys the parent of this object\n\nThis trigger will execute only when
+        the conditions change and they are all true."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5491517914093651820, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: Spawns prefab RabbitExplosion Variant at the position of this object
+        (Life)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5491517914093651820, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: prefabObject
+      value: 
+      objectReference: {fileID: 657665007395616257, guid: 76662691e5d40764881963aff2c8f708, type: 3}
+    - target: {fileID: 5871548896131437606, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: If (Rabbit Variant.velocity.x < 0) sets Rabbit Variant's horizontal
+        flip to True
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134683822827302852, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: If (Rabbit Variant.velocity.x > 0) sets Rabbit Variant's horizontal
+        flip to False
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958729449061644066, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: maxValue
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958729449061644066, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: currentValue
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958729449061644066, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: defaultValue
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560178860540287061, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 279a6e6aa43942b419c74dcb2288ebfa, type: 2}
+    - target: {fileID: 7900666979037312093, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1403843308, guid: 3929bc12e8693bd438dd11cb8c38bafa, type: 3}
+    - target: {fileID: 8304045794955785877, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: color.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304045794955785877, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: color.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304045794955785877, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: color.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304045794955785877, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: color.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304045794955785877, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: color.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304045794955785877, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: color.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 94.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -51.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180227113040577252, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: Sets animation parameter AbsVelocityX of object Rabbit Variant to the
+        absolute horizontal velocity of this object
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 8448211667930296276, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2073360268692488347}
+    - targetCorrespondingSourceObject: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6826325353267449778}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+--- !u!4 &108166833520442053 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+  m_PrefabInstance: {fileID: 9138179576143631956}
+  m_PrefabAsset: {fileID: 0}

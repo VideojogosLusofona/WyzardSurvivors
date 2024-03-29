@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5847009855699548215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1982094938944419161, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: _explanation
+      value: "When a collision with a trigger with tags [Enemy,Wall] starts:\n         
+        destroys this object\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982094938944419161, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: tags.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982094938944419161, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: tags.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1623c8c2d5ad5264dabf65fc62725f09, type: 2}
+    - target: {fileID: 1982094938944419161, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: tags.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: c8f48909e90ea4146804b7c8e71e73de, type: 2}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042496143521876572, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670442929752669973, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: hypertags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670442929752669973, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: hypertags.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3710ecb5e627131499ff67fd80867904, type: 2}
+    - target: {fileID: 7619408341167884815, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.11372548
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619408341167884815, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.8666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619408341167884815, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0.22997071
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619408341167884815, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.b
+      value: 0.03470985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619408341167884815, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.g
+      value: 0.16981131
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619408341167884815, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.r
+      value: 0.0411468
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646364279157866652, guid: 8155563746e832842a381d5415e287a9, type: 3}
+      propertyPath: m_Name
+      value: PlayerShot Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8155563746e832842a381d5415e287a9, type: 3}

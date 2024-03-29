@@ -1,0 +1,466 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1628234211581672624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4107298468538630526}
+  - component: {fileID: 5240034768801685824}
+  - component: {fileID: 4924142277292749578}
+  m_Layer: 0
+  m_Name: DeathG4z3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4107298468538630526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628234211581672624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 9.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6686243257763525034}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5240034768801685824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628234211581672624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46216fa097ecb754babda0f26d640422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "Every 2 to 6 seconds, trigger the actions::\n          spawns prefab
+    EnemyShotFollow Variant at the position of this object (DeathG4z3)\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 4924142277292749578}
+  startTriggered: 0
+  initialDelayEnable: 0
+  initialDelay: {x: 5, y: 5}
+  timeInterval: {x: 2, y: 6}
+--- !u!114 &4924142277292749578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628234211581672624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Spawns prefab EnemyShotFollow Variant at the position of this object
+    (DeathG4z3)
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  prefabObject: {fileID: 3530242652585750012, guid: cdd884c0fe84ffc4d8f0d58fa69d4290, type: 3}
+  spawnPosition: 1
+  targetPosition: {fileID: 0}
+  targetTag: {fileID: 0}
+  setParent: 0
+--- !u!1 &2375921135462485384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6294672032574323108}
+  - component: {fileID: 580804240271166245}
+  m_Layer: 0
+  m_Name: Target 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6294672032574323108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2375921135462485384}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.37, y: 4.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6686243257763525034}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &580804240271166245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2375921135462485384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6fc8a1e9dd21634a9cb00402422ec6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 
+  description: 
+  hypertags:
+  - {fileID: 11400000, guid: bc712d7dccca7fa4288f25e627c9b975, type: 2}
+--- !u!1 &3910103749385180591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8513780042434547176}
+  - component: {fileID: 3594298515432013764}
+  - component: {fileID: 1575727543062594641}
+  - component: {fileID: 8013582213442080486}
+  m_Layer: 0
+  m_Name: LazorEyez
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8513780042434547176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910103749385180591}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 9.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6686243257763525034}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3594298515432013764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910103749385180591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46216fa097ecb754babda0f26d640422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: "Every 2 seconds, trigger the actions::\n          spawns prefab
+    EnemyShot Variant at the position of this object (LazorEyez)\n"
+  description: 
+  enableTrigger: 1
+  allowRetrigger: 1
+  hasPreconditions: 0
+  preConditions: []
+  actions:
+  - delay: 0
+    action: {fileID: 1575727543062594641}
+  startTriggered: 0
+  initialDelayEnable: 0
+  initialDelay: {x: 5, y: 5}
+  timeInterval: {x: 2, y: 2}
+--- !u!114 &1575727543062594641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910103749385180591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e7a99a4ca9064085e4a2664ef1f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Spawns prefab EnemyShot Variant at the position of this object (LazorEyez)
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  prefabObject: {fileID: 768867415644824332, guid: b4f050b7fd4b29b419b31513a4c9dd7c, type: 3}
+  spawnPosition: 1
+  targetPosition: {fileID: 0}
+  targetTag: {fileID: 0}
+  setParent: 0
+--- !u!114 &8013582213442080486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910103749385180591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880a5ca005d24084a800be5935ef4bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: 'This object will align its up axis with the direction towards the
+    closest object tagged with PlayerTarget, at a maximum 200 degrees per second.
+
+'
+  description: 
+  hasConditions: 0
+  conditions: []
+  speed: 200
+  mode: 3
+  inputType: 0
+  rotationAxis: Horizontal
+  rotationButtonPositive: Right
+  rotationButtonNegative: Left
+  rotationKeyPositive: 275
+  rotationKeyNegative: 276
+  rotationAxisX: Horizontal
+  rotationAxisY: Vertical
+  rotationButtonPositiveX: Right
+  rotationButtonNegativeX: Left
+  rotationButtonPositiveY: Up
+  rotationButtonNegativeY: Down
+  rotationKeyPositiveX: 275
+  rotationKeyNegativeX: 276
+  rotationKeyPositiveY: 273
+  rotationKeyNegativeY: 274
+  axisToAlign: 0
+  targetObject: {fileID: 0}
+  targetTag: {fileID: 11400000, guid: a6c58999df9a00742a241b1163e130e6, type: 2}
+  cameraObject: {fileID: 0}
+  cameraTag: {fileID: 0}
+--- !u!1001 &2565734644165893435
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 963784890384726635, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: Flashes renderer Boss Variant for 0.1 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279347602714275178, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279347602714275178, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: 'Follows the closest object tagged with [Player], at 15 units per second,
+        up to a distance of 15 units.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711833029595510622, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: "When (DistanceTo(Tag[Player]) <= 16) and (MeleeAttack > 0.25):\n         
+        flashes renderer Boss Variant for 0.1 seconds\n          resets variable
+        MeleeAttack\n          sets variable DamageValue to 30\n          find all
+        objects tagged with any of [Player] and in them find actions tagged with
+        any of [ActionDamagePlayer] and execute all of them.\n\nThis trigger will
+        execute only when the conditions change and they are all true."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711833029595510622, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: conditions.Array.data[1].value
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257928700629805802, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_Name
+      value: Boss Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406214218510645624, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: "Every frame:\n          sets animation parameter AbsVelocityX of object
+        Boss Variant to the absolute horizontal velocity of this object\n         
+        if (Boss Variant.velocity.x > 0) sets Boss Variant's horizontal flip to False\n         
+        if (Boss Variant.velocity.x < 0) sets Boss Variant's horizontal flip to True\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409654413289586537, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409654413289586537, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103163776152483255, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: "When (Life <= 0):\n          adds 25 to variable XP\n          add
+        an event on the analytics called [EnemyDie]\n          select randomly between
+        the following actions:\n              1. do nothing (95%)\n             
+        2. spawns prefab Heart at the position of this object (Life) (4%)\n         
+        spawns prefab BossZombieExplosion Variant at the position of this object
+        (Life)\n          destroys the parent of this object\n\nThis trigger will
+        execute only when the conditions change and they are all true."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5491517914093651820, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: Spawns prefab BossZombieExplosion Variant at the position of this object
+        (Life)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5491517914093651820, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: prefabObject
+      value: 
+      objectReference: {fileID: 8470300255991858331, guid: bf83cb69e778d2b41b976b8f0100c472, type: 3}
+    - target: {fileID: 5871548896131437606, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: If (Boss Variant.velocity.x < 0) sets Boss Variant's horizontal flip
+        to True
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134683822827302852, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: If (Boss Variant.velocity.x > 0) sets Boss Variant's horizontal flip
+        to False
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501943828238310023, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: changeValue
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501943828238310023, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: Adds 25 to variable XP
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958729449061644066, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: maxValue
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958729449061644066, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: currentValue
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958729449061644066, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: defaultValue
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718739515321858771, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: extraData
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784617468801477827, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: hypertags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784617468801477827, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: hypertags.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: c6987d18a4286454596bb56cc673d6d7, type: 2}
+    - target: {fileID: 8408934417545809435, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: changeValue
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408934417545809435, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: Sets variable DamageValue to 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790492872224041281, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_Name
+      value: Target 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180227113040577252, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      propertyPath: _explanation
+      value: Sets animation parameter AbsVelocityX of object Boss Variant to the
+        absolute horizontal velocity of this object
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 6294672032574323108}
+    - targetCorrespondingSourceObject: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8513780042434547176}
+    - targetCorrespondingSourceObject: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4107298468538630526}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+--- !u!4 &6686243257763525034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9174145535239761041, guid: 6793d6d680aaba145a3a3ddbf7c84e8f, type: 3}
+  m_PrefabInstance: {fileID: 2565734644165893435}
+  m_PrefabAsset: {fileID: 0}
